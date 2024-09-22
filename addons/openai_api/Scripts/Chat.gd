@@ -11,7 +11,7 @@ func _ready():
 	http_request.request_completed.connect(self._http_request_completed)
 	
 ##Sends an api request to chat gpt, will return a signal with a `Message` class.
-func prompt_gpt(ListOfMessages:Array[Message], model: String = "gpt-o-mini", url:String="https://api.openai.com/v1/chat/completions"):
+func prompt_gpt(ListOfMessages:Array[Message], model: String = "gpt-4o-mini", url:String="https://api.openai.com/v1/chat/completions"):
 	var openai_api_key = parent.get_api()
 	if !openai_api_key:
 		return
